@@ -1,0 +1,14 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: ricamonteiro
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: serverless-template-v4
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: serverless-v4-templates
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: "us-east-1"
+
+resources:
+  - ${file(./vpc/vpc.yml):resources}
